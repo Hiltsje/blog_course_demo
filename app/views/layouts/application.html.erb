@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Hillie Kootstra - Aspiring full stack app developer</title>
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <header id="main_navigation" class="clearfix">
-      <a href="index.html" class="name">Hillie Kootstra</a>
-      <nav>
-          <%= link_to "Articles", posts_path %>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-      </nav>
-  </header>
-<%= yield %>
+  <head>
+    <title>Hillie Kootstra - Aspiring full stack app developer</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header id="main_navigation" class="clearfix">
+        <%= link_to "Hillie Kootstra", root_path, class: "name" %></a>
+        <nav>
+            <%= link_to "Articles", posts_path %>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-</body>
+    <%= yield %>
+
+    <footer id="main_footer">
+        <p class="copyright">&copy; 2015 Hillie Kootstra</p>
+        <nav>
+            <a href="http://www.twitter.com/hiltsje" target="_blank"><i class="fa fa-twitter" ></i></a>
+            <a href="http://www.github.com/hiltsje" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="http://www.facebook.com/hilliek" target="_blank"><i class="fa fa-facebook"></i></a>
+        </nav>
+    </footer>
+  </body>
 </html>
